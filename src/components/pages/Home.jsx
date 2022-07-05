@@ -1,17 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import EntryList from "../EntryList";
 
-function Home({ entries }) {
-  return entries ? (
-    <ul>
-      {entries.map((entry) => (
-        <li key={entry._id}>
-          <Link to={`/entry/${entry._id}`}>{entry.entry}</Link>
-        </li>
-      ))}
-    </ul>
-  ) : (
-    <p>Loading ...</p>
+function Home() {
+  return (
+    <>
+      <h3>All Categories</h3>
+      <EntryList />
+    </>
   );
 }
 
